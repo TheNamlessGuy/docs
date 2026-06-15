@@ -7,26 +7,27 @@ This is a step-by-step guide on how to set up a Codeberg repo that mirrors to a 
 ## Creating the repos
 1) Create the repository on GitHub **with** a README.md
 2) In GitHub, go to the [Personal Access Tokens](https://github.com/settings/personal-access-tokens) page
-  * Top right -> Settings -> Developer settings -> Personal Access Tokens
-3) Name the token `codeberg-rw_<repo name>`
-4) Expiration => Never
-5) Only selected repositories => `<repo name>`
-6) Add permissions:
-    * Artifact metadata - read-only
-    * Commit statuses - read-only
-    * Contents - read and write
-    * Custom properties - read-only
-    * Discussions - read-only
-    * Issues - read-only
-    * Metadata (required) - read-only
-7) Create the token, and copy the value. Do NOT close the tab
-8) Head over to the [Codeberg repo migration tool](https://codeberg.org/repo/migrate)
-9) Select GitHub, then fill in:
+    * Top right -> Settings -> Developer settings -> Personal Access Tokens
+3) Fill in:
+    * Name: `codeberg-rw_<repo name>`
+    * Expiration: Never
+    * Repository access: Only selected repositories: `<repo name>`
+    * Permissions:
+        * Artifact metadata - read-only
+        * Commit statuses - read-only
+        * Contents - read and write
+        * Custom properties - read-only
+        * Discussions - read-only
+        * Issues - read-only
+        * Metadata (required) - read-only
+4) Create the token, and copy the value. Do NOT close the tab
+5) Head over to the [Codeberg repo migration tool](https://codeberg.org/repo/migrate)
+6) Select GitHub, then fill in:
     * Migrate from URL: The **HTTPS** clone URL from GitHub
     * Access token: the newly generated PAT
     * Check all the boxes for what to import
     * Let the autofill handle the rest
-10) Migrate the repo
+7) Migrate the repo
 
 ## Setting up mirroring
 1) On Codeberg, head over to to the repo settings
